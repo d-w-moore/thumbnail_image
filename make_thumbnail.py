@@ -47,5 +47,5 @@ md_manifest['failureMode'] = 'FAIL_FAST'
 md_manifest['parentIrodsTargetPath'] = dst_coll
 
 # write out manifest for moarlock
-with open('/dst/mdmanifest.json', 'w') as outfile:
+with open(('/dst/%s' + '_mdmanifest.json')%(size_str,), 'w') as outfile:
     json.dump(md_manifest, outfile, sort_keys=True, indent=4, separators=(',', ': '))
